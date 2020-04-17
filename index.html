@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Hello, world!</title>
+  </head>
+  
+  <body class="body">
+    <div class="container">
+      <div class="row  flex-md-row ">
+
+
+
+
+          <div class="col-12 col-md-6 info justify-content-center  py-5 px-5">
+              <h5>Registro de Percepción de Esfuerzo-Selección Sub 17 Femenina</h5> <br>
+              <p class="instrucciones">
+                  Completar entre 20 y 30 minutos después del entrenamiento o partido. <br><br>
+
+                  No hay respuesta correcta e incorrecta, simplemente responda lo que sintió  después del entrenamiento o partido. <br><br>
+                  
+                  Responda sinceramente, es de manera individual sin compartir criterios u opiniones con sus compañeras
+              </p>
+          </div>
+
+
+
+
+        <div class="col-12 col-md-6 contacto-2 py-5">
+          <h2 class="contacto-h2"> <i class="fa fa-phone" aria-hidden="true"></i> Contáctanos</h2>
+            <form action="enviar2.php" id="formulario" method="post">
+
+              <div class="form-group px-4">
+
+
+                <label for="nombreCompleto">Nombre y Apellido</label>
+                <input type="text" class="form-control entrada" id="formGroupExampleInput" id="name" name="nombre" placeholder="Nombre Completo" required="required">
+
+
+                <label >Indique si tuvo partido o entrenamiento</label>
+                <div class="seleccion align-middle">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">1: Partido</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">2: Entremaniento</label>
+                  </div>
+                </div>
+
+
+
+
+                      
+                      
+                <label for="start">Fecha del partido o el entrenamiento:</label>
+                <input class="entrada col-12 align-middle" type="date" id="start" name="fecha" value="dd-mm-aaaa" min="2020-01-01" max="2041-12-31">
+
+
+                <label for="start">Percepción de esfuerzo: se refiere al grado de exigencia que tuvo el entrenamiento o partido para usted, responda utilizando como guía el siguiente cuadro</label>
+                <div class="contrainer text-center">
+                  <div class="row  percepcion0">
+                    <div class="col-2 percepcion0a">ESCALARPE</div>
+                    <div class="percepcion0b col-10">Percepción Subjetiva de Esfuerzo / Intensidad</div>
+                  </div>
+                  <div class="row  percepcion1">
+                    <div class="col-2 percepcion1a">10</div>
+                    <div class="percepcion1b col-10">Actividad de esfuerzo máximo: Casi imposible de seguir con la actividad. <br>
+                    Completamente sin aliento, Incapaz de hablar.</div>
+                  </div>
+                  <div class="row  percepcion2">
+                    <div class="col-2 percepcion2a">9</div>
+                    <div class="percepcion2b col-10">Actividad muy dura: Muy dificil de mantener la intensidad del ejercicio. Apenas puedo respirar. Decir sólo unas pocas palabras.</div>
+                  </div>
+                  <div class="row  percepcion3">
+                    <div class="col-2 percepcion3a">7-8</div>
+                    <div class="percepcion3b col-10">Actividad Vigorosa: Falta de aliento. <br> Puede decir una frase.</div>
+                  </div>
+                  <div class="row  percepcion4">
+                    <div class="col-2 percepcion4a">4-6</div>
+                    <div class="percepcion4b col-10">Actividad moderada: Respiración pesada, puede mantener una conversación corta. <br> Actividad todavía algo cómoda, pero cada vez más desafiante.</div>
+                  </div>
+                  <div class="row  percepcion5">
+                    <div class="col-2 percepcion5a">2-3</div>
+                    <div class="percepcion5b col-10">Actividad ligera: Se siente como si pudiera realizar la actividad durante horas. <br> Fácil de respirar y mantener una conversación</div>
+                  </div>
+                  <div class="row  percepcion6">
+                      <div class="col-2 percepcion6a">1</div>
+                      <div class="percepcion6b col-10">Actividad muy ligera: Casi ningún esfuerzo</div>
+                    </div>
+                    <div class="row  percepcion7">
+                        <div class="col-2 percepcion7a">0</div>
+                        <div class="percepcion7b col-10">Sin actividad: Dormir o ver televisión.</div>
+                      </div>
+                </div>
+
+
+
+                <label for="email">Email</label>
+                <input type="email" name="correo" id="email" class="form-control  entrada" placeholder="E-mail" required="required">
+
+                <label for="tel">Teléfono</label>
+                <input type="tel" name="tel" id="tel" class="form-control  entrada" placeholder="Teléfono" required="required">
+
+                <textarea id="msg" type="msg" name="mensaje" class="form-control  entrada" placeholder="Mensáje" required="required"></textarea>
+                
+                <button type="submit" value="" id="btn">Enviar</button>
+
+              </div>
+
+            </form>
+          </div>
+
+<!-------------->
+<!-------------->
+<!-------------->
+
+
+          
+      </div>
+  </div>
+
+  
+<!-------------->
+<!-------------->
+<!-------------->
+
+
+
+  <script>
+    function() {
+        var formulario = document.getElementById('formulario'),
+            elementos = formulario.elements,
+            boton = document.getElementById('btn');
+
+        var validarNombre = function(e) {
+            if (formulario.nombre.value == 0) {
+                alert("Completa el campo Nombre");
+                e.preventDefault();
+            }
+        };
+
+        var validar = function(e) {
+            validarNombre(e);
+        };
+
+        formulario.addEventListener("submit", validar);
+    }
+</script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+    <script src="js/bootstrap.min.js"  crossorigin="anonymous"></script>
+  </body>
+</html>
