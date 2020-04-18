@@ -11,18 +11,7 @@ $header = "X-Mailer: PHP/" . phpversion() . " \r\n";
 $header = "Mime-Version: 1.0 \r\n";
 $header = "Content-Type: text/plain";
 
-$mensaje = "
-<!DOCTYPE html>
-        <html lang='en'>
-        <head>
-            <meta charset='UTF-8'>
-            <title>Document</title>
-        </head>
-        <body>
-        <p style='font-size: 20px; background-color:light-blue;'>Este mensaje fue enviado por: " . $nombre . "</p>,\r\n;
-            <p>Texto: " . $opcion . "</p>
-        </body>
-        </html>";
+
 
 $mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
 $mensaje = "1: Partido, 2: Entrenamiento: " . $opcion . ",\r\n";
